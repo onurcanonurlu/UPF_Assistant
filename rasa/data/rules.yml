@@ -1,0 +1,22 @@
+version: "3.0"
+
+rules:
+  - rule: get_professor_info
+    steps:
+      - intent: get_professor_info
+      - action: action_get_professor_info
+
+  - rule: get_professor_room
+    steps:
+      - intent: get_professor_room
+      - action: action_get_professor_info
+
+  - rule: get_professor_group
+    steps:
+      - intent: get_professor_group
+      - action: action_get_professor_info
+
+  - rule: get_weather
+    steps:
+      - intent: get_weather
+      - action: action_get_weather

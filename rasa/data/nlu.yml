@@ -1,0 +1,75 @@
+version: "3.1"
+
+nlu:
+  - intent: get_professor_info
+    examples: |
+      - Can you tell me about [Professor Lobo](professor_name)?
+      - What do you know about [Vsevolod Eremenko](professor_name)?
+      - Give me information about [Dr. Patel](professor_name).
+      - Who is [Lara Raad Cisa](professor_name)?
+      - Can you tell me the details of [Marcelo José Bertalmio Barate](professor_name)?
+      - I want to know about [Professor Brown](professor_name).
+      - Tell me about [Adrià Arbues Sangüesa](professor_name).
+      - Information about [Maria Bosser Carenys](professor_name).
+      - Please provide info on [Marcelo José Bertalmio Barate](professor_name).
+      - Would like to know about [Professor Smith](professor_name).
+  
+
+  - intent: get_professor_group
+    examples: |
+        - What is the group of [Jorge Lobo](professor_name)?
+        - Which group does [Adrià Arbues Sangüesa](professor_name) belong to?
+        - What is the research area of [Professor Kim](professor_name)?
+        - Tell me about the research group of [Maria Bosser Carenys](professor_name).
+        - What is the field of research of [Dr. Singh](professor_name)?
+        - What group [Lopez](professor_name) is in?
+        - What group [Jorge Lopez](professor_name) is in?
+        - What group [Professor Lopez](professor_name) is in?
+        - What's [Marcelo José Bertalmio Barate](professor_name)'s group?
+
+  - intent: get_professor_room
+    examples: |
+      - What is the office of [Professor Lobo](professor_name)?
+      - Where is the office of [Batuhan Sayis](professor_name)?
+      - What is the room number of [Adrià Arbues Sangüesa](professor_name)?
+      - Can you tell me the office location of [Professor Smith](professor_name)?
+      - Tell me the office address of [Dr. Singh](professor_name)?
+      - Office of [Maria Bosser Carenys](professor_name)?
+      - Room of [Batuhan Sayis](professor_name)?
+      - What is the room of [Lara Raad Cisa](professor_name)?
+      - Where is the room of [Vsevolod Eremenko](professor_name)?
+      - Tell me the room of [Xavier Binefa Valls](professor_name).
+      - Where is [Dr. Patel](professor_name)'s room?
+      - Where is [Batuhan Sayis](professor_name)'s office?
+      - What's [Marcelo José Bertalmio Barate](professor_name)'s room?
+      - What's [Lara Raad Cisa](professor_name)'s office? 
+      - Where is [Berkay Demirel](professor_name) located?
+
+  - intent: get_professor_in_room
+    examples: |
+      - Who is in [51123](room)?
+      - Who are in the office [51123](room)?
+      - Give me the professors in [56632a](room)?
+      - Tell me who is located in [52213](room).
+      - Who are the professors in [52213](room).
+      - Who is located in [23314](room).
+
+  - intent: get_professor_in_group
+    examples: |
+      - Who is in [AI](group)?
+      - Which professors are in [Artificial Intelligence and Machine Learning](group)?
+      - Which professors work in [BERG Biomedical Electronics Research](group)? 
+      - Give me the professors in [BERG](group) group.
+      - Tell me who works in the area of [Music Technology](group).
+      - Who works in [AI](group).
+
+
+  - intent: get_weather
+    examples: |
+      - What is the weather like today?
+      - Give me the weather.
+      - Weather for today?
+      - Weather
+      - How is the weather?
+
+

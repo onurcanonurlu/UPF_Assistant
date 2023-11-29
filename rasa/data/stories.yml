@@ -1,0 +1,42 @@
+version: "3.1"
+
+stories:
+  - story: get_professor_info
+    steps:
+      - intent: get_professor_info
+      - slot_was_set:
+        - professor_name: "Jorge Lobo"
+      - action: action_get_professor_info
+
+  - story: get_professor_room
+    steps:
+      - intent: get_professor_room
+      - slot_was_set:
+        - professor_name: "Francesco Barbieri"
+      - action: action_get_professor_info
+
+  - story: get_professor_group
+    steps:
+      - intent: get_professor_group
+      - slot_was_set:
+          - professor_name: "Batuhan Sayis"
+      - action: action_get_professor_info
+  - story: get_professor_in_room
+    steps:
+      - intent: get_professor_in_room
+      - slot_was_set:
+          - professor_office: "51123"
+      - action: action_get_professor_info
+
+  - story: get_professor_in_group
+    steps:
+      - intent: get_professor_in_group
+      - slot_was_set:
+        - professor_group: "Music Technology"
+      - action: action_get_professor_info
+
+  - story: get_weather
+    steps:
+      - intent: get_weather
+      - action: action_get_weather
+

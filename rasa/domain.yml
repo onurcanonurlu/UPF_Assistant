@@ -1,0 +1,73 @@
+version: "3.1"
+
+intents:
+  - get_professor_info
+  - get_professor_group
+  - get_professor_room
+  - get_professor_in_room
+  - get_professor_in_group
+  - get_weather
+
+entities:
+  - professor_name
+  - room
+  - group
+  - building
+
+slots:
+  professor_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: professor_name
+      - type: from_text
+        intent: get_professor_info
+      - type: from_text
+        intent: get_professor_group
+      - type: from_text
+        intent: get_professor_room
+  professor_group:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: group
+      - type: from_text
+        intent: get_professor_in_group
+  professor_office:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: room
+      - type: from_text
+        intent: get_professor_in_room
+  professor_building:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: building
+
+responses:
+  utter_ask_professor_name:
+    - text: "Sure, which professor are you asking about?"
+
+  utter_no_professor_found:
+    - text: "I'm sorry, I could not find any information about that professor."
+  utter_no_professor_name:
+    - text: "Please provide a professor name."
+  utter_no_professor_found_in_group:
+    - text: "There is no one in this group."
+  utter_no_professor_found_in_room:
+    - text: "There is no one in that room."
+  utter_greet:
+    - text: "Hello, how can I help you?"
+  utter_thanks:
+    - text: "You're welcome, have a nice day."
+  utter_bye:
+    - text: "Goodbye."
+actions:
+  - action_get_professor_info
+  - action_get_weather
+
